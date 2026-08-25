@@ -28,3 +28,25 @@ Cloudflare Pages supports static HTML + Pages Functions. Connect this folder/rep
 The browser calls /api/checkout. The Cloudflare Pages Function calls Square's Checkout API using the secret access token. The browser never sees the token.
 
 The booking page can later call /api/availability, which should query Square Bookings API for the selected service/date. Do not expose Square credentials in frontend JavaScript.
+
+
+## Easy customization
+
+The site is intentionally plain HTML/CSS so each page can have its own wording and layout.
+
+- `index.html` — homepage copy, hero, cards and main CTA
+- `services.html` — services/packages
+- `brand-activations.html` — brand activation content
+- `weddings.html` — wedding content
+- `celebrations.html` — celebration content
+- `how-it-works.html` — process/steps
+- `add-ons.html` — add-ons and pricing
+- `about.html` — story/about copy
+- `booking.html` — booking form and options
+- `contact.html` — contact form
+- `styles.css` — global visual system: colors, type, spacing, buttons, cards and responsive behavior
+- `assets/logo-red.png` / `assets/logo-white.png` — transparent logo assets
+
+For page-specific changes, edit the text directly in that page's HTML. For a site-wide visual change, edit `:root` and the shared classes in `styles.css`.
+
+The logo assets were cleaned to transparent backgrounds so the logo no longer appears as a solid square in the header/footer.
