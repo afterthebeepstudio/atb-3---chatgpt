@@ -50,3 +50,6 @@ The site is intentionally plain HTML/CSS so each page can have its own wording a
 For page-specific changes, edit the text directly in that page's HTML. For a site-wide visual change, edit `:root` and the shared classes in `styles.css`.
 
 The logo assets were cleaned to transparent backgrounds so the logo no longer appears as a solid square in the header/footer.
+
+
+Logo fix: the header uses `assets/logo-header.png` (red logo) and the footer uses `assets/logo-footer.png` (light logo). The files are cropped to remove the large transparent padding that made the logo appear missing.
