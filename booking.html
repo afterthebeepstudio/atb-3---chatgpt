@@ -1,14 +1,185 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Check your date — After the Beep Studio</title><link rel="stylesheet" href="/styles.css"></head><body>
-<header class="nav"><a class="brand" href="/"><img src="/assets/logo-header.png" alt="After the Beep Studio"></a><nav><a href="/services.html">Services</a><a href="/brand-activations.html">Brand Activations</a><a href="/weddings.html">Weddings</a><a href="/about.html">About</a><a class="nav-cta" href="/booking.html">Check your date →</a></nav><button class="menu">☰</button></header>
-<main><section class="page-head"><p class="eyebrow">BOOKING</p><h1>Press play.<br>Check your <em>date.</em></h1><p class="lead">Choose your service, date and time. Add-ons can be selected before checkout.</p>
-<div class="booking-card">
-  <div class="field-grid"><label>Event type<select id="eventType"><option value="wedding">Wedding</option><option value="activation">Brand activation</option><option value="corporate">Corporate event</option><option value="celebration">Birthday / celebration</option><option value="baby">Baby shower</option></select></label>
-  <label>Service<select id="service"><option value="keepsake" data-price="390">The Keepsake — $390</option><option value="conversation" data-price="850">The Conversation — $850</option><option value="moment" data-price="1250">The Moment — $1,250</option></select></label></div>
-  <label>Event date<input type="date" id="date"></label>
-  <button id="check" class="btn dark">Check availability →</button>
-  <div id="availability" class="availability" hidden></div>
-  <div id="addons" hidden><h2>Add-ons</h2><label class="check"><input type="checkbox" value="75" data-name="Extra rental hour"> Extra rental hour — $75</label><label class="check"><input type="checkbox" value="50" data-name="Custom prompt cards"> Custom prompt cards — $50</label><label class="check"><input type="checkbox" value="75" data-name="Custom signage"> Custom signage — $75</label><label class="check"><input type="checkbox" value="150" data-name="Highlight edit"> Highlight edit — $150</label><label class="check"><input type="checkbox" value="200" data-name="On-site attendant"> On-site attendant — $200</label>
-  <div class="total">Estimated total: <strong id="total">$390</strong></div>
-  <button id="checkout" class="btn dark">Continue to Square checkout →</button></div>
-</div></section></main><footer><div><img src="/assets/logo-footer.png" alt="After the Beep Studio"></div><div><p>Some calls are worth keeping.<br>Better yet, on video.</p></div><div class="footer-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></div><div><p>Instagram</p><a href="https://instagram.com/afterthebeepstudio.ca">@afterthebeepstudio.ca</a></div></footer>
-<script src="/script.js"></script><script src="/booking.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Check your date — After the Beep Studio</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">
+    <img src="/assets/logo-header.png" alt="After the Beep Studio">
+  </a>
+
+  <nav>
+    <a href="/services.html">Services</a>
+    <a href="/brand-activations.html">Brand Activations</a>
+    <a href="/weddings.html">Weddings</a>
+    <a href="/about.html">About</a>
+    <a class="nav-cta" href="/booking.html">Check your date →</a>
+  </nav>
+
+  <button class="menu">☰</button>
+</header>
+
+
+<main>
+
+  <section class="page-head">
+
+    <p class="eyebrow">CHECK YOUR DATE</p>
+
+    <h1>
+      Press play.<br>
+      Check your <em>date.</em>
+    </h1>
+
+    <p class="lead">
+      Tell us a little about your event and the date you're considering.
+      We'll check our availability and get back to you with next steps.
+    </p>
+
+
+    <form
+      class="contact-form"
+      method="post"
+      action="https://formspree.io/f/xwledbow"
+    >
+
+      <label>
+        Name
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+        >
+      </label>
+
+
+      <label>
+        Email
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email"
+          required
+        >
+      </label>
+
+
+      <label>
+        Event type
+        <select name="event_type" required>
+          <option value="">Select an event type</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Brand Activation">Brand Activation</option>
+          <option value="Corporate Event">Corporate Event</option>
+          <option value="Birthday / Celebration">Birthday / Celebration</option>
+          <option value="Baby Shower">Baby Shower</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+
+
+      <label>
+        Event date
+        <input
+          type="date"
+          name="event_date"
+          required
+        >
+      </label>
+
+
+      <label>
+        Estimated guest count
+        <input
+          type="number"
+          name="guest_count"
+          min="1"
+          placeholder="e.g. 100"
+        >
+      </label>
+
+
+      <label>
+        Tell us about your event
+        <textarea
+          name="message"
+          rows="6"
+          placeholder="Tell us about your event, location, timing, and anything else you'd like us to know..."
+          required
+        ></textarea>
+      </label>
+
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New After the Beep date inquiry"
+      >
+
+
+      <button
+        class="btn dark"
+        type="submit"
+      >
+        Check my date →
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div>
+    <img
+      src="/assets/logo-footer.png"
+      alt="After the Beep Studio"
+    >
+  </div>
+
+  <div>
+    <p>
+      Some calls are worth keeping.<br>
+      Better yet, on video.
+    </p>
+
+    <p>Toronto · GTA</p>
+  </div>
+
+  <div class="footer-links">
+    <a href="/services.html">Services</a>
+    <a href="/add-ons.html">Add-ons</a>
+    <a href="/booking.html">Booking</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+  </div>
+
+  <div>
+    <p>Instagram</p>
+    <a
+      href="https://instagram.com/afterthebeepstudio.ca"
+      target="_blank"
+      rel="noreferrer"
+    >
+      @afterthebeepstudio.ca
+    </a>
+  </div>
+
+</footer>
+
+<script src="/script.js"></script>
+
+</body>
+</html>
